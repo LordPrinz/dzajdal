@@ -12,6 +12,12 @@ module.exports = {
                     font: "#e7ede2",
                 },
             },
+            gridTemplateColumns: {
+                layout: "minmax(12rem, 1fr) 3fr minmax(12rem, 1fr)",
+            },
+            gridTemplateRows: {
+                layout: "1fr 9rem",
+            },
         },
     },
     plugins: [],

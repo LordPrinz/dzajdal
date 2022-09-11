@@ -10,3 +10,16 @@
     padding: 0;
     font-family: "Lato";
 }
+
+html {
+    font-size: 62.5%;
+}
+
+@layer components {
+    .layout {
+        @apply grid grid-cols-layout grid-rows-layout;
+    }
+    .main {}
+    .left-bar {}
+    .right-bar {}
+}
