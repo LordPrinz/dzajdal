@@ -7,16 +7,16 @@ module.exports = {
             colors: {
                 main: {
                     primary: "#1a1a1a",
-                    secondary: "#1c1e1b",
+                    secondary: "#1f1f1f",
                     green: "#88dea5",
                     font: "#e7ede2",
                 },
             },
             gridTemplateColumns: {
-                layout: "minmax(12rem, 1fr) 3fr minmax(12rem, 1fr)",
+                layout: "18rem 6fr 18rem",
             },
             gridTemplateRows: {
-                layout: "1fr 9rem",
+                layout: "1fr 12rem",
             },
         },
     },

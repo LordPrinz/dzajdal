@@ -1,5 +1,5 @@
 const LeftBar = () => {
-  return <section></section>
+	return <section className="left-bar"></section>;
 };
 
 export default LeftBar;

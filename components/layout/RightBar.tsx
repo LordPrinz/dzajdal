@@ -1,5 +1,5 @@
 const RightBar = () => {
-	return <section></section>;
+	return <section className="right-bar"></section>;
 };
 
 export default RightBar;

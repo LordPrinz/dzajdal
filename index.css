@@ -17,9 +17,18 @@ html {
 
 @layer components {
     .layout {
-        @apply grid grid-cols-layout grid-rows-layout;
+        @apply grid grid-cols-layout grid-rows-layout min-h-[100vh];
     }
-    .main {}
-    .left-bar {}
-    .right-bar {}
+    .main {
+        @apply bg-main-secondary
+    }
+    .left-bar {
+        @apply bg-main-primary
+    }
+    .right-bar {
+        @apply bg-main-primary
+    }
+    .bottom-bar {
+        @apply bg-main-primary col-span-full
+    }
 }
