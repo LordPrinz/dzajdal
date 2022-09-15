@@ -8,7 +8,7 @@ module.exports = {
                 main: {
                     primary: "#1a1a1a",
                     secondary: "#1f1f1f",
-                    green: "#88dea5",
+                    green: "#0cb74b",
                     font: "#e7ede2",
                 },
             },
