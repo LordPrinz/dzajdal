@@ -7,8 +7,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
-				<title>Dzajtify</title>
-				<meta name="description" content="Dzajtify music player" />
+				<title>Dzajdal</title>
+				<meta name="description" content="Dzajdal music player" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</Head>
 
