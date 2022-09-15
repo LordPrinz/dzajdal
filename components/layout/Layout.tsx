@@ -1,4 +1,4 @@
-const Layout = ({ children }: { children: JSX.Element }) => {
+const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
 	return <div className="layout">{children}</div>;
 };
 
