@@ -27,7 +27,7 @@ body {
         @apply bg-main-secondary
     }
     .left-bar {
-        @apply bg-main-primary row-start-1 row-end-[-1]
+        @apply bg-main-primary row-start-1 row-end-[-1] py-8 flex px-8
     }
     .right-bar {
         @apply bg-main-primary row-start-1 row-end-[-1] col-start-3 col-end-[-1]
@@ -36,6 +36,6 @@ body {
         @apply bg-main-primary col-start-2 col-end-[-2] rounded-tl-[2rem] rounded-tr-[2rem]
     }
     .profile {
-        @apply flex px-6 text-main-font py-6
+        @apply flex px-6 text-main-font py-8
     }
 }

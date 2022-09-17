@@ -5,16 +5,16 @@ const Profile = () => {
 	return (
 		<div className="profile flex justify-center items-center">
 			<Image
-				className="rounded-full"
+				className="rounded-full select-none"
 				src="/profile_picture.png"
 				height="38"
 				width="38"
 			/>
-			<div className="ml-4 mr-8">
+			<div className="ml-3 mr-7">
 				<div className="text-2xl">Lord Prinz</div>
-				<div className="text-base text-main-font2">Premium</div>
+				<div className="text-base text-main-font2 select-none">Premium</div>
 			</div>
-			<IoNotificationsOutline className="text-4xl" />
+			<IoNotificationsOutline className="text-4xl hover:cursor-pointer" />
 		</div>
 	);
 };
