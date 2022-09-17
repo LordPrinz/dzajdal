@@ -15,6 +15,10 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    background-color: #1c1e1c;
+}
+
 @layer components {
     .layout {
         @apply grid grid-cols-layout grid-rows-layout min-h-[100vh];
@@ -23,12 +27,15 @@ html {
         @apply bg-main-secondary
     }
     .left-bar {
-        @apply bg-main-primary
+        @apply bg-main-primary row-start-1 row-end-[-1]
     }
     .right-bar {
-        @apply bg-main-primary
+        @apply bg-main-primary row-start-1 row-end-[-1] col-start-3 col-end-[-1]
     }
     .bottom-bar {
-        @apply bg-main-primary col-span-full
+        @apply bg-main-primary col-start-2 col-end-[-2] rounded-tl-[2rem] rounded-tr-[2rem]
+    }
+    .profile {
+        @apply flex px-6 text-main-font py-6
     }
 }

@@ -6,17 +6,18 @@ module.exports = {
         extend: {
             colors: {
                 main: {
-                    primary: "#1a1a1a",
-                    secondary: "#1f1f1f",
-                    green: "#0cb74b",
-                    font: "#e7ede2",
+                    primary: "#191a19",
+                    secondary: "#1c1e1c",
+                    green: "#5ded8e",
+                    font: "#e1e1e1",
+                    font2: "#acacac",
                 },
             },
             gridTemplateColumns: {
-                layout: "18rem 6fr 18rem",
+                layout: "20rem 5fr 20rem",
             },
             gridTemplateRows: {
-                layout: "1fr 12rem",
+                layout: "1fr 10rem",
             },
         },
     },
