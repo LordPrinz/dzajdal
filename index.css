@@ -45,3 +45,7 @@ body {
         @apply flex w-full
     }
 }
+
+::selection {
+    background-color: #41ad65
+}

@@ -15,14 +15,14 @@ const LeftBar = () => {
 			<Logo />
 
 			<div className="mt-20">
-				<h3 className="uppercase ml-8 text-l mb-4 text-main-font font-extrabold">
+				<h3 className="uppercase ml-10 text-l mb-4 text-main-font font-extrabold">
 					Menu
 				</h3>
 				<LeftMenuItem href="/" name="Home" icon={<HiHome />} />
 				<LeftMenuItem href="/" name="Trends" icon={<HiTrendingUp />} />
 			</div>
 			<div className="mt-12">
-				<h3 className="uppercase ml-8 text-l mb-4 text-main-font font-extrabold">
+				<h3 className="uppercase ml-10 text-l mb-4 text-main-font font-extrabold">
 					Library
 				</h3>
 				<LeftMenuItem href="/" name="Recent" icon={<HiOutlineMusicNote />} />
@@ -30,7 +30,7 @@ const LeftBar = () => {
 				<LeftMenuItem href="/" name="Playlist" icon={<RiPlayListLine />} />
 			</div>
 			<div className="mt-12">
-				<h3 className="uppercase ml-8 text-l mb-4 text-main-font font-extrabold">
+				<h3 className="uppercase ml-10 text-l mb-4 text-main-font font-extrabold">
 					Account
 				</h3>
 				<LeftMenuItem href="/settings" name="Settings" icon={<RiSettings5Line />} />
