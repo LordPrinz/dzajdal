@@ -38,4 +38,7 @@ body {
     .profile {
         @apply flex px-6 text-main-font py-8
     }
+    .search-bar {
+        @apply flex items-center bg-main-gray text-xl relative rounded-3xl
+    }
 }

@@ -11,6 +11,7 @@ module.exports = {
                     green: "#5ded8e",
                     font: "#e1e1e1",
                     font2: "#acacac",
+                    gray: "#383838",
                 },
             },
             gridTemplateColumns: {
