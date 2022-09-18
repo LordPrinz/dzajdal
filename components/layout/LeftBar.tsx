@@ -1,10 +1,17 @@
+import { HiHome } from "react-icons/hi";
+import LeftMenuItem from "../LeftMenuItem";
+import Logo from "../Logo";
+
 const LeftBar = () => {
 	return (
 		<section className="left-bar">
-			<h1 className="text-4xl ml-1 mt-2">
-				<span className="text-main-green">Dżaj</span>
-				<span className="text-main-font">dal</span>
-			</h1>
+			<Logo />
+
+			<div>
+				<h3 className="uppercase">Menu</h3>
+				<LeftMenuItem href="/" name="Home" icon={<HiHome />} />
+				<LeftMenuItem href="/" name="Home" icon={<HiHome />} />
+			</div>
 		</section>
 	);
 };

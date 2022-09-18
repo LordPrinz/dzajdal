@@ -27,7 +27,7 @@ body {
         @apply bg-main-secondary px-10 py-8
     }
     .left-bar {
-        @apply bg-main-primary row-start-1 row-end-[-1] py-8 flex px-8
+        @apply bg-main-primary row-start-1 row-end-[-1] py-8 flex px-8 flex-col
     }
     .right-bar {
         @apply bg-main-primary row-start-1 row-end-[-1] col-start-3 col-end-[-1]
