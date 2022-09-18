@@ -15,7 +15,7 @@ module.exports = {
                 },
             },
             gridTemplateColumns: {
-                layout: "20rem 5fr 20rem",
+                layout: "16rem 5fr 20rem",
             },
             gridTemplateRows: {
                 layout: "1fr 10rem",

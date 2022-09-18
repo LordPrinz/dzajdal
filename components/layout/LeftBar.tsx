@@ -1,7 +1,7 @@
 const LeftBar = () => {
 	return (
 		<section className="left-bar">
-			<h1 className="text-4xl ml-1">
+			<h1 className="text-4xl ml-1 mt-2">
 				<span className="text-main-green">Dżaj</span>
 				<span className="text-main-font">dal</span>
 			</h1>

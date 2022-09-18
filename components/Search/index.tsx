@@ -1,8 +1,10 @@
+import HistoryControllers from "./HistoryControllers";
 import Searchbar from "./Searchbar";
 
 const Search = () => {
 	return (
-		<div>
+		<div className="search">
+			<HistoryControllers />
 			<Searchbar />
 		</div>
 	);

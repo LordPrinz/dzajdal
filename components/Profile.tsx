@@ -14,7 +14,7 @@ const Profile = () => {
 				<div className="text-2xl">Lord Prinz</div>
 				<div className="text-base text-main-font2 select-none">Premium</div>
 			</div>
-			<IoNotificationsOutline className="text-4xl hover:cursor-pointer" />
+			<IoNotificationsOutline className="text-4xl cursor-pointer hover:text-main-font2 transition" />
 		</div>
 	);
 };
