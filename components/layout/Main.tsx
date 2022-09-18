@@ -1,9 +1,9 @@
-import Searchbar from "../Search/Searchbar";
+import Search from "../Search";
 
 const Main = () => {
 	return (
 		<main className="main">
-			<Searchbar />
+			<Search />
 		</main>
 	);
 };
