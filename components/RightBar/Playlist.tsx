@@ -4,7 +4,7 @@ import Link from "next/link";
 const Playlist = () => {
 	return (
 		<div className="ml-9 mt-12">
-			<h2 className="text-main-font text-[17px]">Your Playlists</h2>
+			<h2 className="text-main-font text-[17px] font-bold">Your Playlists</h2>
 			<ul className="mt-5">
 				<PlayListItem followers={45890} href="/" image="/zeit.png" title="Zeit" />
 				<PlayListItem

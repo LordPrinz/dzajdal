@@ -30,7 +30,7 @@ const PlayListItem = ({
 						/>
 					</div>
 					<div className="ml-6 mr-7">
-						<div className="text-2xl mb-0.5">{title}</div>
+						<div className="text-2xl mb-0.5 font-bold">{title}</div>
 						<div className="text-base text-main-font2 select-none">
 							{followers} followers
 						</div>

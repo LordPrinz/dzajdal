@@ -6,7 +6,7 @@ import {
 } from "react-icons/bi";
 import { useState, useEffect } from "react";
 
-const SoundBar = () => {
+const SoundBar = ({ className }: { className: string }) => {
 	const [volume, setVolume] = useState(50);
 	const [prevVolume, setPrevVolume] = useState(50);
 	const [isMuted, setIsMuted] = useState(false);
@@ -41,7 +41,7 @@ const SoundBar = () => {
 	}, [isMuted]);
 
 	return (
-		<div className="sound-bar">
+		<div className={`sound-bar ${className || ""}`}>
 			{icon}
 			<input
 				type="range"

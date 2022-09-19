@@ -30,7 +30,7 @@ body {
         @apply bg-main-primary row-start-1 row-end-[-1] py-8 flex flex-col
     }
     .right-bar {
-        @apply bg-main-primary row-start-1 row-end-[-1] col-start-3 col-end-[-1]
+        @apply bg-main-primary row-start-1 row-end-[-1] col-start-3 col-end-[-1] relative
     }
     .bottom-bar {
         @apply bg-main-primary col-start-2 col-end-[-2] rounded-tl-[2rem] rounded-tr-[2rem]
@@ -48,7 +48,7 @@ body {
         @apply text-main-font py-4 mt-0.5
     }
     .sound-bar {
-        @apply px-6 mr-1 text-main-font text-4xl mt-10 flex gap-4
+        @apply px-6 mr-1 text-main-font text-[25px] mt-10 flex gap-4
     }
 }
 

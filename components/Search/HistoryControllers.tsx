@@ -16,7 +16,7 @@ const HistoryControllers = () => {
 	};
 
 	return (
-		<div className="flex mr-8 gap-5 justify-between items-center text-3xl text-main-font font-extrabold">
+		<div className="flex mr-8 gap-5 justify-between items-center text-4xl text-main-font font-extrabold">
 			<BsChevronLeft
 				className={`hover:text-main-font2 transition cursor-pointer ${
 					current === 0 ? "text-main-font2 cursor-not-allowed" : ""
