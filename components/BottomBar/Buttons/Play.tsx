@@ -13,12 +13,12 @@ const Play = () => {
 			{isPlaying ? (
 				<BsFillPauseCircleFill
 					onClick={togglePlayer}
-					className="text-main-green text-5xl"
+					className="text-main-green text-5xl cursor-pointer"
 				/>
 			) : (
 				<BsFillPlayCircleFill
 					onClick={togglePlayer}
-					className="text-main-green  text-5xl"
+					className="text-main-green  text-5xl cursor-pointer"
 				/>
 			)}
 		</>

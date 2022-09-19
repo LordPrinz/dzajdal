@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HiOutlineHeart } from "react-icons/hi";
 
 const CurrentSong = () => {
 	return (
@@ -18,6 +19,7 @@ const CurrentSong = () => {
 				</div>
 				<div className="ml-7 text-large text-main-font2 mt-1">Rick Astley</div>
 			</div>
+			<HiOutlineHeart className="text-4xl text-main-font translate-x-6 -translate-y-6 cursor-pointer" />
 		</div>
 	);
 };
