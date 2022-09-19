@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import useHistory from "../../hooks/useHistory";
 

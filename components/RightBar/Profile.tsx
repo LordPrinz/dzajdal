@@ -3,7 +3,7 @@ import { IoNotificationsOutline } from "react-icons/io5";
 
 const Profile = () => {
 	return (
-		<div className="profile justify-center items-center mt-0.5">
+		<div className="profile items-center mt-0.5">
 			<Image
 				className="rounded-full select-none"
 				src="/profile_picture.png"
