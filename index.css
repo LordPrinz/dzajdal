@@ -36,13 +36,16 @@ body {
         @apply bg-main-primary col-start-2 col-end-[-2] rounded-tl-[2rem] rounded-tr-[2rem]
     }
     .profile {
-        @apply flex px-6 text-main-font py-8
+        @apply flex px-6 ml-3 text-main-font py-8
     }
     .search-bar {
         @apply flex items-center bg-main-gray text-xl relative rounded-3xl flex-1
     }
     .search {
         @apply flex w-full
+    }
+    .playListItem {
+        @apply text-main-font py-4 mt-0.5
     }
 }
 
