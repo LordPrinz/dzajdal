@@ -1,21 +1,23 @@
-import { BsFillPauseCircleFill, BsFillPlayCircleFill } from "react-icons/bs";
-import { FaRandom } from "react-icons/fa";
-import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
-import { ImLoop } from "react-icons/im";
 import { HiOutlineHeart } from "react-icons/hi";
 import Play from "./Buttons/Play";
+import Previous from "./Buttons/Previous";
+import Next from "./Buttons/Next";
+import Random from "./Buttons/Random";
+import Loop from "./Buttons/Loop";
 const Player = () => {
 	return (
 		<div className="player">
-			<div className="top-bar">
-				<FaRandom />
-				<MdSkipPrevious />
+			<div className="topBar max-w-[650px] ">
+				<Random />
+				<Previous />
 				<Play />
-				<MdSkipNext />
-				<ImLoop />
+				<Next />
+				<Loop />
 			</div>
-			<div className="bottom-bar">v</div>
-			<HiOutlineHeart />
+			<div className="bottomBar max-w-[650px] w-full">
+				<input type="range" className="w-full" />
+			</div>
+			{/* <HiOutlineHeart /> */}
 		</div>
 	);
 };
