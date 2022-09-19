@@ -1,5 +1,5 @@
 import CurrentSong from "../BottomBar/CurrentSong";
-import Player from "../Player";
+import Player from "../BottomBar/Player";
 
 const BottomBar = () => {
 	return (

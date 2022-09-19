@@ -50,6 +50,15 @@ body {
     .sound-bar {
         @apply px-6 mr-1 text-main-font text-[25px] mt-10 flex gap-4
     }
+    .player {
+        @apply flex flex-col w-full
+    }
+    .top-bar {
+        @apply flex
+    }
+    .bottom-bar {
+        @apply flex
+    }
 }
 
 ::selection {
