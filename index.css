@@ -47,6 +47,9 @@ body {
     .playListItem {
         @apply text-main-font py-4 mt-0.5
     }
+    .sound-bar {
+        @apply px-6 mr-1 text-main-font text-4xl mt-10 flex gap-4
+    }
 }
 
 ::selection {
