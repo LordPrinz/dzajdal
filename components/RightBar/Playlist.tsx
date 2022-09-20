@@ -1,12 +1,38 @@
 import PlayListItem from "./PlaylistItem";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import Link from "next/link";
+import useSpotify from "../../hooks/useSpotify";
+import { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 const Playlist = () => {
+	const spotifyApi = useSpotify();
+	const { data: session, status } = useSession();
+	const [playlists, setPlaylists] = useState([{}]);
+	useEffect(() => {
+		if (!spotifyApi.getAccessToken()) {
+			return;
+		}
+		spotifyApi.getUserPlaylists().then((data) => {
+			setPlaylists(data.body.items);
+		});
+	}, [session, spotifyApi]);
+
 	return (
 		<div className="ml-9 mt-12">
 			<h2 className="text-main-font text-[17px] font-bold">Your Playlists</h2>
 			<ul className="mt-5">
-				<PlayListItem followers={45890} href="/" image="/zeit.png" title="Zeit" />
+				{playlists.map((playlist: any) => {
+					return (
+						<PlayListItem
+							href={playlist?.href}
+							image={playlist?.images ? playlist?.images[0]?.url : ""}
+							title={playlist?.name}
+							isPublic={playlist?.owner?.display_name}
+						/>
+					);
+				})}
+
+				{/* <PlayListItem followers={45890} href="/" image="/zeit.png" title="Zeit" />
 				<PlayListItem
 					followers={83321}
 					href="/"
@@ -24,7 +50,7 @@ const Playlist = () => {
 					href="/"
 					image="https://image.ceneostatic.pl/data/products/26382746/i-imagine-dragons-night-visions-deluxe-cd.jpg"
 					title="Night Visions"
-				/>
+				/> */}
 			</ul>
 			<Link href="/">
 				<a className="text-main-font inline-flex items-center gap-2 text-lg mt-6">
