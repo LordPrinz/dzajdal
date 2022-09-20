@@ -2,15 +2,15 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import useHistory from "../../hooks/useHistory";
 
 const HistoryControllers = () => {
-	const { history, back, forward, current } = useHistory();
+	const { back, forward, canGoBack, canGoForward } = useHistory();
 
 	const forwardHandler = () => {
-		if (current === history.length) return;
+		if (!canGoForward) return;
 		forward();
 	};
 
 	const backHandler = () => {
-		if (current === 0) return;
+		if (!canGoBack) return;
 		back();
 	};
 
@@ -18,14 +18,15 @@ const HistoryControllers = () => {
 		<div className="flex mr-8 gap-5 justify-between items-center text-4xl text-main-font font-extrabold">
 			<BsChevronLeft
 				className={`hover:text-main-font2 transition cursor-pointer ${
-					current === 0 ? "text-main-font2 cursor-not-allowed" : ""
+					!canGoBack ? "text-main-font2 cursor-not-allowed" : ""
 				}`}
 				onClick={backHandler}
 			/>
+
 			<BsChevronRight
 				onClick={forwardHandler}
 				className={`hover:text-main-font2 transition cursor-pointer ${
-					current === history.length ? "text-main-font2 cursor-not-allowed" : ""
+					!canGoForward ? "text-main-font2 cursor-not-allowed" : ""
 				}`}
 			/>
 		</div>

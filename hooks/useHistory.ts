@@ -1,42 +1,44 @@
-import { useRouter } from "next/router";
-import { useCallback, useEffect, useState } from "react";
-
+import { useDispatch, useSelector } from "react-redux";
+import {
+	push as pushState,
+	back as backState,
+	forward as forwardState,
+} from "../store/slices/historySlice";
 const useHistory = () => {
-	const router = useRouter();
+	const historyState = (useSelector((state) => state) as any).history;
+	const dispatch = useDispatch();
+	const history = historyState.routesHistory;
+	const currentIndex = historyState.currentRoute;
+	const currentRoute = history[currentIndex];
 
-	const [history, setHistory] = useState<string[]>([]);
-	const [currentPlace, setCurrentPlace] = useState(0);
+	const canGoBack = currentIndex - 1 >= 0;
+	const canGoForward = currentIndex + 1 <= history.length - 1;
 
-	const goBack = useCallback(() => {
-		if (currentPlace === 0) {
+	const push = (route: string) => {
+		if (currentRoute === route) {
 			return;
 		}
+		dispatch(pushState(route));
+	};
 
-		setCurrentPlace((place) => place - 1);
-		router.push(history[currentPlace]);
-	}, [currentPlace]);
+	const back = () => {
+		dispatch(backState());
+	};
 
-	const goForward = useCallback(() => {
-		if (!history[currentPlace + 1]) {
-			return;
-		}
+	const forward = () => {
+		dispatch(forwardState());
+	};
 
-		setCurrentPlace((place) => place + 1);
-
-		router.push(history[currentPlace]);
-	}, [currentPlace, history]);
-
-	useEffect(() => {
-		setHistory((prevSate) => {
-			return [...prevSate, router.asPath];
-		});
-	}, [router.asPath]);
+	console.log(currentRoute, history);
 
 	return {
-		history: history.slice(2),
-		back: goBack,
-		forward: goForward,
-		current: currentPlace,
+		history,
+		currentRoute,
+		canGoBack,
+		canGoForward,
+		push,
+		back,
+		forward,
 	};
 };
 

@@ -10,21 +10,14 @@ export const historySlice = createSlice({
 	initialState,
 	reducers: {
 		push: (state, action) => {
-			state.currentRoute += 1;
-			state.routesHistory.slice(state.currentRoute);
+			state.routesHistory = state.routesHistory.slice(0, state.currentRoute + 1);
+			state.currentRoute = state.routesHistory.length;
 			state.routesHistory.push(action.payload);
 		},
-		back: (state, action) => {
-			if (state.routesHistory.length - 2 < 0) {
-				return;
-			}
+		back: (state) => {
 			state.currentRoute -= 1;
 		},
-		forward: (state, action) => {
-			if (state.currentRoute + 1 > state.routesHistory.length - 2) {
-				return;
-			}
-
+		forward: (state) => {
 			state.currentRoute += 1;
 		},
 	},

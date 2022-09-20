@@ -12,12 +12,20 @@ const useSpotify = () => {
 
 	useEffect(() => {
 		if (session) {
-			console.log(session?.error);
-			if (session?.error === "RefreshAccessTokenError") {
+			// if (session?.error === "RefreshAccessTokenError") {
+			// 	signIn();
+			// }
+
+			const expireTime = new Date(session.expires).getTime();
+
+			if (expireTime < new Date().getTime()) {
 				signIn();
 			}
 
-			spotifyApi.setAccessToken((session.user as any).accessToken);
+			if (!spotifyApi.getAccessToken()) {
+				console.log(session.user as any);
+				spotifyApi.setAccessToken((session.user as any).accessToken);
+			}
 		}
 	}, [session]);
 

@@ -5,6 +5,7 @@ import {
 	BiVolumeMute,
 } from "react-icons/bi";
 import { useState, useEffect } from "react";
+import useSpotify from "../../hooks/useSpotify";
 
 const SoundBar = ({ className }: { className: string }) => {
 	const [volume, setVolume] = useState(50);
@@ -13,6 +14,8 @@ const SoundBar = ({ className }: { className: string }) => {
 	const volumeChangeHandler = ({ target }: React.BaseSyntheticEvent) => {
 		setVolume(+target.value);
 	};
+
+	const spotifyApi = useSpotify();
 
 	const toggleMute = () => {
 		setIsMuted((prevState) => !prevState);
@@ -39,6 +42,8 @@ const SoundBar = ({ className }: { className: string }) => {
 			setVolume(prevVolume);
 		}
 	}, [isMuted]);
+
+	spotifyApi.setVolume(+volume);
 
 	return (
 		<div className={`sound-bar ${className || ""}`}>

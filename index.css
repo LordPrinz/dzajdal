@@ -5,62 +5,62 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Lato";
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Lato";
 }
 
 html {
-    font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-    background-color: #1c1e1c;
+	background-color: #1c1e1c;
 }
 
 @layer components {
-    .layout {
-        @apply grid grid-cols-layout grid-rows-layout min-h-[100vh];
-    }
-    .main {
-        @apply bg-main-secondary px-10 py-8
-    }
-    .left-bar {
-        @apply bg-main-primary row-start-1 row-end-[-1] py-8 flex flex-col
-    }
-    .right-bar {
-        @apply bg-main-primary row-start-1 row-end-[-1] col-start-3 col-end-[-1] relative
-    }
-    .bottom-bar {
-        @apply bg-main-primary col-start-2 col-end-[-2] rounded-tl-[2rem] rounded-tr-[2rem] flex items-center w-full
-    }
-    .profile {
-        @apply flex px-6 ml-3 text-main-font py-8
-    }
-    .search-bar {
-        @apply flex items-center bg-main-gray text-xl relative rounded-3xl flex-1
-    }
-    .search {
-        @apply flex w-full
-    }
-    .playListItem {
-        @apply text-main-font py-4 mt-0.5
-    }
-    .sound-bar {
-        @apply px-6 mr-1 text-main-font text-[25px] mt-10 flex gap-4
-    }
-    .player {
-        @apply flex flex-col w-full justify-center px-32 items-center
-    }
-    .topBar {
-        @apply flex items-center gap-6 justify-center
-    }
-    .bottomBar {
-        @apply flex justify-center mt-5
-    }
+	.layout {
+		@apply grid grid-cols-layout grid-rows-layout min-h-[100vh];
+	}
+	.main {
+		@apply bg-main-secondary px-10 py-8;
+	}
+	.left-bar {
+		@apply bg-main-primary row-start-1 row-end-[-1] py-8 flex flex-col;
+	}
+	.right-bar {
+		@apply bg-main-primary row-start-1 row-end-[-1] col-start-3 col-end-[-1] relative;
+	}
+	.bottom-bar {
+		@apply bg-main-primary col-start-2 col-end-[-2] rounded-tl-[2rem] rounded-tr-[2rem] flex items-center w-full;
+	}
+	.profile {
+		@apply flex px-6 ml-3 text-main-font py-8;
+	}
+	.search-bar {
+		@apply flex items-center bg-main-gray text-xl relative rounded-3xl flex-1;
+	}
+	.search {
+		@apply flex w-full;
+	}
+	.playListItem {
+		@apply text-main-font py-4 mt-0.5 px-4 pr-2 cursor-pointer inline-flex items-center select-none rounded-xl min-w-[38px] hover:bg-main-gray text-ellipsis whitespace-nowrap overflow-hidden;
+	}
+	.sound-bar {
+		@apply px-6 mr-1 text-main-font text-[25px] mt-10 flex gap-4;
+	}
+	.player {
+		@apply flex flex-col w-full justify-center px-32 items-center;
+	}
+	.topBar {
+		@apply flex items-center gap-6 justify-center;
+	}
+	.bottomBar {
+		@apply flex justify-center mt-5;
+	}
 }
 
 ::selection {
-    background-color: #41ad65
+	background-color: #41ad65;
 }

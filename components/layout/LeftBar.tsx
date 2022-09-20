@@ -26,9 +26,9 @@ const LeftBar = () => {
 				<h3 className="uppercase ml-10 text-l mb-4 text-main-font font-extrabold">
 					Library
 				</h3>
-				<LeftMenuItem href="/t" name="Recent" icon={<HiOutlineMusicNote />} />
-				<LeftMenuItem href="/t" name="Liked Song" icon={<HiOutlineHeart />} />
-				<LeftMenuItem href="/t" name="Playlist" icon={<RiPlayListLine />} />
+				<LeftMenuItem href="/recent" name="Recent" icon={<HiOutlineMusicNote />} />
+				<LeftMenuItem href="/fav" name="Liked Song" icon={<HiOutlineHeart />} />
+				<LeftMenuItem href="/playlists" name="Playlist" icon={<RiPlayListLine />} />
 			</div>
 			<div className="mt-12">
 				<h3 className="uppercase ml-10 text-l mb-4 text-main-font font-extrabold">
