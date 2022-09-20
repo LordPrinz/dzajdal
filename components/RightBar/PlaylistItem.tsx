@@ -20,7 +20,7 @@ const PlayListItem = ({
 		<li className="playListItem">
 			<Link href={href}>
 				<a className="inline-flex items-center ">
-					<div className="select-none rounded-xl min-w-[38px] break-all">
+					<div className="select-none rounded-xl min-w-[38px]  text-ellipsis whitespace-nowrap overflow-hidden">
 						<Image
 							loader={loader.bind(null, { url: image })}
 							src={image}

@@ -17,7 +17,6 @@ const Player = () => {
 			<div className="bottomBar max-w-[650px] w-full">
 				<input type="range" className="w-full" />
 			</div>
-			{/* <HiOutlineHeart /> */}
 		</div>
 	);
 };
