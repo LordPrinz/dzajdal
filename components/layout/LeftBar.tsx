@@ -8,6 +8,7 @@ import { TbLogout } from "react-icons/tb";
 import { RiPlayListLine, RiSettings5Line } from "react-icons/ri";
 import LeftMenuItem from "../LeftBar/LeftMenuItem";
 import Logo from "../LeftBar/Logo";
+import { signOut } from "next-auth/react";
 
 const LeftBar = () => {
 	return (
@@ -34,7 +35,13 @@ const LeftBar = () => {
 					Account
 				</h3>
 				<LeftMenuItem href="/settings" name="Settings" icon={<RiSettings5Line />} />
-				<LeftMenuItem href="/t" name="Logout" icon={<TbLogout />} />
+				<LeftMenuItem
+					onClick={() => {
+						signOut();
+					}}
+					name="Logout"
+					icon={<TbLogout />}
+				/>
 			</div>
 		</section>
 	);
